@@ -14,13 +14,13 @@ export const GlobalContext = createContext(initialState)
 // so that they all have access to the global state/context)
 
 export const GlobalProvider = ( {children} ) => {
-    const {state, dispatch} = useReducer(AppReducer, initialState);
+    const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (
         <GlobalContext.Provider value={{
             blog_posts: state.blog_posts
         }}>
-            {children} /** All the sub-components ("chilren") of the root App component  */
+            { children } /** All the sub-components ("chilren") of the root App component  */
         </GlobalContext.Provider>
     )
 }
