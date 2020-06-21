@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { GlobalProvider } from './contextData';
@@ -11,7 +10,7 @@ function App() {
     <GlobalProvider>
       <div className="App">
         <header className="App-header">
-        <Header />
+          <Header />
         </header>
         <BlogHome />
       </div>

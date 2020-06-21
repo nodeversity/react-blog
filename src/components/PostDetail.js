@@ -1,9 +1,19 @@
 import React from 'react'
 
-export const PostDetail = () => {
+export const PostDetail = ({ post }) => {
+    console.log(post)
     return (
-        <div>
-            Blog Post Detail
-        </div>
+        <>
+            <div>
+                A Post Detail
+                <h3> 
+                    { post.title }
+                </h3>
+                {post.id}
+                <div>
+                    {post.body}
+                </div>
+            </div>
+        </>
     )
 }
