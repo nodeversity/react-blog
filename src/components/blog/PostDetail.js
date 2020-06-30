@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
 
-export const PostDetail = ({ post }) => {
+const PostDetail = ({ post }) => {
     console.log(post)
     return (
         <>
@@ -16,3 +16,5 @@ export const PostDetail = ({ post }) => {
         </>
     )
 }
+
+export default PostDetail;

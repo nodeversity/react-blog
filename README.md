@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Purpose 
-This is meant to be a proof-of-concept application using the new hook-based ReactJS app dev style and the Context API for state management.
+This is meant to be a proof-of-concept application using the new hook-based ReactJS app dev style (for UI component creation) and the Context API for state management.
 
 
 ## Tech Used:
@@ -30,5 +30,3 @@ For more resources on Frontend web development, ReactJS and more, please, see:
 * [Muhammad Jalloh on Twitter](https://twitter.com/nodesultan)
 * [Muhammad Jaloh on LinkedIn](https://linkedin.com/in/muhammadjalloh)
 * [NodeVersity](https://nodeversity.com/)
-
-I

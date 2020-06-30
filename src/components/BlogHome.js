@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { PostDetail } from './PostDetail'
+import { PostDetail } from '.blog/PostDetail'
 
 import { GlobalContext } from '../contextData';
 
