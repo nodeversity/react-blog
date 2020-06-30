@@ -5,7 +5,6 @@ export const PostDetail = ({ post }) => {
     return (
         <>
             <div>
-                A Post Detail
                 <h3> 
                     { post.title }
                 </h3>

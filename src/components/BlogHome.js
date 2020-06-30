@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { PostDetail } from './PostDetail'
 
 import { GlobalContext } from '../contextData';
@@ -14,7 +15,9 @@ export const BlogHome = () => {
                 <h3> Blog Home</h3>
                 <ul className="list">
                     { blog_posts.map(post => (
-                        <PostDetail post={post} key={post.id} />
+                       <Link to={`/${post.id}`}> 
+                       {post.title}
+                       </Link>
                     )
                     )}
                 </ul>
