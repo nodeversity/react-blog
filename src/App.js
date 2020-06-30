@@ -11,15 +11,15 @@ function App() {
   return (
     <Router>
       <GlobalProvider>
-      <div className="App">
-        <header className="App-header">
-          <Header />
-        </header>
-       <Route path="/" component={BlogHome} />
-       <Route path="/:postUrl" component={PostDetail} />
-      </div>
-    </GlobalProvider>
-
+        <div className="App">
+          <header className="App-header">
+            <Header />
+          </header>
+        <Route path="/" component={BlogHome} />
+        <Route path="/:postUrl" component={PostDetail} />
+        <Footer />
+        </div>
+      </GlobalProvider>
     </Router>
   );
 }
