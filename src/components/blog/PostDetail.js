@@ -1,6 +1,10 @@
 import React, {useEffect, useContext} from 'react'
 
 const PostDetail = ({ post }) => {
+    
+    useEffect(() => {
+        
+    })
     console.log(post)
     return (
         <>
