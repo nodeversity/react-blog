@@ -16,3 +16,83 @@ import initialPostState from '../reducers/postReducer';
 */
 const [state, dispatch] = useReducer(postReducer, initialPostState)
 
+export const createNewPost =(new_post_obj) => {
+	PostApi.newPost(new_post_obj)
+		.then(response => {
+			dispatch({
+				type: NEW_POST,
+				payload: response.data
+			})
+		})
+		.catch(err => {
+			dispatch({
+				type: NEW_POST_FAILED,
+				payload: err
+			})
+		})
+}
+
+export const getPostById = (post_id) => {
+	PostApi.getPost(post_id)
+		.then(response => {
+			dispatch({
+				type: GET_POST,
+				payload: response.data
+			})
+		})
+		.catch(err => {
+			dispatch({
+				type: GET_POST_FAILED,
+				payload: err
+			})
+		})
+}
+
+export const updatePost = (post_id, updated_post_obj) => {
+	PostApi.updatePost(post_id, updated_post_obj)
+		.then(response => {
+			dispatch({
+				type: UPDATE_POST,
+				payload: response.data
+			})
+		})
+		.catch(err => {
+			dispatch({
+				type: UPDATE_POST_FAILED,
+				payload: err
+			})
+		})
+}
+
+export const getAllPosts = () => {
+	PostApi.getAllPosts()
+		.then(response => {
+			dispatch({
+				type: GET_ALL_POSTS,
+				payload: response.data
+			})
+		})
+		.catch(err => {
+			dispatch({
+				type: GET_ALL_POSTS_FAILED,
+				payload: err
+			})
+		})
+}
+
+export const deletePostById = (post_id) => {
+	PostApi.deletePost(post_id)
+		.then(response => {
+			dispatch({
+				type: DELETE_POST,
+				payload: response.data
+			})
+		})
+		.catch(err => {
+			dispatch({
+				type: DELETE_POST_FAILED,
+				payload: err
+			})
+		})
+}
+
