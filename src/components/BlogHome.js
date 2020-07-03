@@ -5,16 +5,16 @@ import { PostDetail } from './blog/PostDetail'
 import { AppContext } from '../contextData';
 
 export const BlogHome = () => {
-    const { blog_posts } = useContext(GlobalContext)
+    const { posts } = useContext(AppContext)
 
-    console.log(blog_posts);
+    console.log(posts);
     
     return (
         <>
              <div>
                 <h3> Blog Home</h3>
                 <ul className="list">
-                    { blog_posts.map(post => (
+                    { posts.map(post => (
                        <Link to={`/${post.id}`} key={post.id}> 
                         {post.title}
                        </Link>

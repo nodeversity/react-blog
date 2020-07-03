@@ -12,12 +12,11 @@ const initialState = {
 }
 
 export const AppContext = createContext(initialState);
-const [state, dispatch] = useReducer(AppReducer, initialState);
-
 // Create the 'Provider' component to wrap the root App component and supply 
 // the global app state to its 'children' components.
 
 export const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (<AppContext.Provider value={{
         posts: state.posts,
