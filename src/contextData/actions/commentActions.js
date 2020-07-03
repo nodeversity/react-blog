@@ -7,6 +7,7 @@ import {
     GET_COMMENTS_FOR_POST_FAILED, DELETE_COMMENT, DELETE_COMMENT_FAILED, UPDATE_COMMENT, UPDATE_COMMENT_FAILED
 } from './types/comments';
 
+import { initialCommentState } from '../reducers/commentReducer';
 
 const [state, dispatch] = useReducer(commentReducer, initialCommentState)
 

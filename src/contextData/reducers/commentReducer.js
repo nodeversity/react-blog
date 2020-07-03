@@ -2,8 +2,6 @@ import {
     NEW_COMMENT, NEW_COMMENT_FAILED, GET_COMMENT, GET_COMMENT_FAILED, GET_COMMENTS_FOR_POST, 
     GET_COMMENTS_FOR_POST_FAILED, DELETE_COMMENT, DELETE_COMMENT_FAILED, UPDATE_COMMENT, UPDATE_COMMENT_FAILED
 } from '../actions/types/comments';
-import { initialPostState } from './postReducer';
-
 
 const initialCommentState = {
     comments: [],
