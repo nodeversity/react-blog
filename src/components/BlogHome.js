@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { PostDetail } from './blog/PostDetail'
 
-import { GlobalContext } from '../contextData';
+import { AppContext } from '../contextData';
 
 export const BlogHome = () => {
     const { blog_posts } = useContext(GlobalContext)

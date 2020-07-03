@@ -4,12 +4,14 @@ import React, { createContext, useReducer } from 'react';
 import postReducer, { initialPostState } from './postReducer'
 import commentReducer from './commentReducer';
 
+
 const initialState = {
     posts: postReducer,
     comments: commentReducer
 }
 
 export const AppContext = createContext(initialState);
+const [state, dispatch] = useReducer(AppReducer, initialState);
 
 // Create the 'Provider' component to wrap the root App component and supply 
 // the global app state to its 'children' components.
