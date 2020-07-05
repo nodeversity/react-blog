@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getPosts } from '../contextData/actions/postActions';
 import { PostDetail } from './blog/PostDetail'
+
 
 import { AppContext } from '../contextData';
 
@@ -8,6 +10,10 @@ export const BlogHome = () => {
     const { posts } = useContext(AppContext)
 
     console.log(posts);
+
+    useEffect(() => {
+        getPosts();
+    }, [])
     
     return (
         <>

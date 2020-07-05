@@ -8,7 +8,7 @@ class PostApi {
         Note: JSONPlaceholder *does not persist* UPDATE, PATCH and DELETE requests; it only simulates them.
     */
 
-    static getAllPosts(){
+    static getPosts(){
         return Axios.get(`posts/?_limit=25`);
     }
     

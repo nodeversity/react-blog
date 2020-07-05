@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from 'react';
+import React, { useReducer, useContext, dispatch  } from 'react';
 import CommentApi from '../../api/CommentApi';
 import commentReducer from '../reducers/commentReducer'
 
@@ -9,7 +9,7 @@ import {
 
 import { initialCommentState } from '../reducers/commentReducer';
 
-const [state, dispatch] = useReducer(commentReducer, initialCommentState)
+//const [state, dispatch] = useReducer(commentReducer, initialCommentState)
 
 export const newComment = (new_comment_obj) => {
     CommentApi.newComment(new_comment_obj)

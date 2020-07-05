@@ -1,6 +1,8 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, dispatch } from 'react';
 //Import the postReducer for use with the useReducer() hook to pull out its 'state' and 'dispatch' props
 import postReducer from '../reducers/postReducer';
+import initialPostState from '../reducers/postReducer';
+
 import PostApi from '../../api/CommentApi.js';
 
 import {
@@ -9,12 +11,11 @@ import {
 	DELETE_POST_FAILED
 } from './types/posts';
 
-import initialPostState from '../reducers/postReducer';
-
 /**
 	Each action CREATOR/function handles the dispatch of payload/data for two action TYPES/scenarios: when the intended action succeeds or fails.
 */
-const [state, dispatch] = useReducer(postReducer, initialPostState)
+
+//const [state, dispatch] = useReducer(postReducer, initialPostState)
 
 export const createNewPost =(new_post_obj) => {
 	PostApi.newPost(new_post_obj)
@@ -65,7 +66,8 @@ export const updatePost = (post_id, updated_post_obj) => {
 }
 
 export const getAllPosts = () => {
-	PostApi.getAllPosts()
+	//const [state, dispatch] = useReducer(postReducer, initialPostState)
+	PostApi.getPosts()
 		.then(response => {
 			dispatch({
 				type: GET_ALL_POSTS,
