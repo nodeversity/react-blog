@@ -9,7 +9,7 @@ const initialCommentState = {
     comment_error_msg: {}
 }
 
-const commentReducer = (state=initialCommentState, action) => {
+const commentReducer = (state, action) => {
     switch(action.type){
         case NEW_COMMENT:
             return {

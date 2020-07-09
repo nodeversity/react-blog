@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getPosts } from '../contextData/actions/postActions';
+import { getAllPosts } from '../contextData/actions/postActions';
 import { PostDetail } from './blog/PostDetail'
 
 
@@ -12,7 +12,7 @@ export const BlogHome = () => {
     console.log(posts);
 
     useEffect(() => {
-        getPosts();
+        getAllPosts();
     }, [])
     
     return (
@@ -20,7 +20,7 @@ export const BlogHome = () => {
              <div>
                 <h3> Blog Home</h3>
                 <ul className="list">
-                    { posts.map(post => (
+                { posts.map(post => (
                        <Link to={`/${post.id}`} key={post.id}> 
                         {post.title}
                        </Link>

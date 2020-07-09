@@ -3,7 +3,7 @@ import React, { useReducer, dispatch } from 'react';
 import postReducer from '../reducers/postReducer';
 import initialPostState from '../reducers/postReducer';
 
-import PostApi from '../../api/CommentApi.js';
+import PostApi from '../../api/PostApi.js';
 
 import {
 	NEW_POST, NEW_POST_FAILED, GET_POST, GET_POST_FAILED, UPDATE_POST,
@@ -65,7 +65,7 @@ export const updatePost = (post_id, updated_post_obj) => {
 		})
 }
 
-export const getAllPosts = () => {
+export const getAllPosts = () => dispatch => {
 	//const [state, dispatch] = useReducer(postReducer, initialPostState)
 	PostApi.getPosts()
 		.then(response => {

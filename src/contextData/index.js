@@ -2,13 +2,13 @@ import React, { createContext, useReducer } from 'react';
 
 //Import the individual REDUCERS that help get the new state upon state 'changes'
 import AppReducer from './reducers/AppReducer'
-//import postReducer, { initialPostState } from './reducers/postReducer'
+import postReducer, { initialPostState } from './reducers/postReducer'
 //import commentReducer from './reducers/commentReducer';
 
 
 const initialState = {
-    posts: [],
-    comments: []
+    posts: postReducer,
+    comments: {}
 }
 
 export const AppContext = createContext(initialState);

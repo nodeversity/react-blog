@@ -5,12 +5,12 @@ import {
 } from '../actions/types/posts';
 
 export const initialPostState = {
-    post_list: [],
+    post_list: [{'title':'Title One'},{'title': 'Post Two'},{'title': 'Post Three'}],
     post: {},
     post_error_msg: {}
 }
 
-const postReducer = (state=initialPostState, action) => {
+const postReducer = (state, action) => {
     switch(action.type) {
         case NEW_POST:
             return {
