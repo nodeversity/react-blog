@@ -11,7 +11,7 @@ import {
 
 //import { AppContext } from '../contextData';
 
-export const BlogHome = () => {
+const BlogHome = () => {
     //const { posts } = useContext(AppContext)
     const [state, dispatch] = useReducer(postReducer, initialPostState);
 
@@ -53,3 +53,5 @@ export const BlogHome = () => {
         
     )
 }
+
+export default BlogHome;
