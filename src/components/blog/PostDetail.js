@@ -2,6 +2,7 @@ import React, {useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import PostApi from '../../api/PostApi';
 import CommentApi from '../../api/CommentApi';
+import CommentDetail from './CommentDetail'
 
 import {
 	GET_POST, GET_POST_FAILED, DELETE_POST,
@@ -71,16 +72,10 @@ const PostDetail = ({ post }) => {
                 </div>
             </div>
             <div className="comment_list">
-                {state.comment_list.map(comment => {
-                    return(
-                        <p className="commentItem" key={comment.id}>
-                            <small> {comment.email} says:</small>
-                            <h5>
-                                {comment.body}
-                            </h5>
-                        </p>
-                    )
-                })}
+                {state.comment_list.map(comment => (
+                    <CommentDetail comment={comment} />
+                )
+                )}
             </div>
         </>
     )
