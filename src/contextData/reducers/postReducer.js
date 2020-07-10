@@ -4,10 +4,16 @@ import {
 	DELETE_POST_FAILED
 } from '../actions/types/posts';
 
+import {
+    GET_COMMENTS_FOR_POST, GET_COMMENTS_FOR_POST_FAILED
+} from '../actions/types/comments';
+
 export const initialPostState = {
     post_list: [{'title':'Title One'},{'title': 'Post Two'},{'title': 'Post Three'}],
     post: {},
-    post_error_msg: {}
+    post_error_msg: {},
+    comment_list: [],
+    comment_error_msg: {}
 }
 
 const postReducer = (state, action) => {
@@ -32,6 +38,16 @@ const postReducer = (state, action) => {
             return {
                 ...state,
                 post_error_msg: action.payload
+            }
+        case GET_COMMENTS_FOR_POST:
+            return {
+                ...state,
+                comment_list: action.payload
+            }
+        case GET_COMMENTS_FOR_POST_FAILED:
+            return {
+                ...state,
+                comment_error_msg: action.payload
             }
         case UPDATE_POST:
             return {
