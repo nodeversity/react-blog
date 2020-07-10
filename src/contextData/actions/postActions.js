@@ -1,4 +1,4 @@
-import React, { useReducer, dispatch } from 'react';
+import React, { useReducer, /*dispatch*/ } from 'react';
 //Import the postReducer for use with the useReducer() hook to pull out its 'state' and 'dispatch' props
 import postReducer from '../reducers/postReducer';
 import initialPostState from '../reducers/postReducer';
@@ -18,6 +18,7 @@ import {
 //const [state, dispatch] = useReducer(postReducer, initialPostState)
 
 export const createNewPost =(new_post_obj) => {
+	const [state, dispatch] = useReducer(postReducer, initialPostState)
 	PostApi.newPost(new_post_obj)
 		.then(response => {
 			dispatch({
@@ -34,6 +35,7 @@ export const createNewPost =(new_post_obj) => {
 }
 
 export const getPostById = (post_id) => {
+	const [state, dispatch] = useReducer(postReducer, initialPostState)
 	PostApi.getPost(post_id)
 		.then(response => {
 			dispatch({
@@ -65,8 +67,8 @@ export const updatePost = (post_id, updated_post_obj) => {
 		})
 }
 
-export const getAllPosts = () => dispatch => {
-	//const [state, dispatch] = useReducer(postReducer, initialPostState)
+export const getAllPosts = () => {
+	const [state, dispatch] = useReducer(postReducer, initialPostState)
 	PostApi.getPosts()
 		.then(response => {
 			dispatch({
@@ -82,7 +84,7 @@ export const getAllPosts = () => dispatch => {
 		})
 }
 
-export const deletePostById = (post_id) => {
+export const deletePostById = (post_id) => dispatch =>  {
 	PostApi.deletePost(post_id)
 		.then(response => {
 			dispatch({
