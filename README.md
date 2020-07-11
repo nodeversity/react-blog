@@ -22,7 +22,7 @@ These main sub-directories that hold the codebase for the app include:
 
 * `contextData`: These hold the codebase that helps the app interact with Reacts's Context API to enable management of component state/data across the app (i.e 'globally') without having to pass these down through the component hierarchy. 
 
-The sub-directories here are:
+The sub-directories herein (i.e inside the `/contextData` dir) are:
 
 * `/actions`: These hold the ACTION types (aka 'scenarios' in the `actions/types` sub-folder)
 
@@ -31,7 +31,6 @@ The sub-directories here are:
 
 ## Additional Resources:
 * [JSONPlaceholder.typicode.com](https://JSONPlaceholder.typicode.com): For making CRUD calls against a faux (but functional) API server.
-* 
 
 ## Running this App
 * `npm start`: To start the development server
@@ -39,6 +38,7 @@ The sub-directories here are:
 
 ### Caveat:
 * This app is a (very basic) proof-of-concept and work-in-progress. So, please, study it to gain some insight, but don't 'copy-and-paste' into production code! Por Favor! :)
+* Please, excuse any typos, grammatical errors, etc. I didn't put on my 'Editor's Hat' while writing these docs! :)
 
 ## Contact Me
 If you are reading this, you can contact me with offers, comments or suggestions. I am available on these platforms:
