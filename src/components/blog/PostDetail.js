@@ -61,11 +61,10 @@ const PostDetail = ({ post }) => {
 
     return (
         <>
-            <div>
-                <h2> 
-                {state.post.id}: { state.post.title }
+            <div className="post">
+                <h2 style={{ textAlign: 'center' }}> 
+                    { state.post.title }
                 </h2>
-                
                 <div>
                     {state.post.body}
                 </div>
