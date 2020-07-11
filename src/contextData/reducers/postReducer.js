@@ -9,7 +9,7 @@ import {
 } from '../actions/types/comments';
 
 export const initialPostState = {
-    post_list: [{'title':'Title One'},{'title': 'Post Two'},{'title': 'Post Three'}],
+    post_list: [],
     post: {},
     post_error_msg: {},
     comment_list: [],

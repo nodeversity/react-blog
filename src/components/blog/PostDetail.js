@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import PostApi from '../../api/PostApi';
 import CommentApi from '../../api/CommentApi';
 import CommentDetail from './CommentDetail'
+import postReducer, { initialPostState } from '../../contextData/reducers/postReducer';
 
 import {
 	GET_POST, GET_POST_FAILED, DELETE_POST,
@@ -12,8 +13,6 @@ import {
 import {
 	GET_COMMENTS_FOR_POST, GET_COMMENTS_FOR_POST_FAILED
 } from '../../contextData/actions/types/comments';
-
-import postReducer, { initialPostState } from '../../contextData/reducers/postReducer';
 
 const PostDetail = ({ post }) => {
     const [state, dispatch] = useReducer(postReducer, initialPostState);
