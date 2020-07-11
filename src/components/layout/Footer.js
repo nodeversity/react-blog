@@ -1,10 +1,14 @@
 import React, {useEffect, useContext} from 'react';
 
+
+
 export const Footer = () => {
+    const footerStyle = {textAlign: 'center'};
+    
     return(
-        <span>
+        <p style={footerStyle}>
             (c) 2020. NodeVersity, Inc. 2020.
-        </span>
+        </p>
     )
 }
 
