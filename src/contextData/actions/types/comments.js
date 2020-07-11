@@ -1,5 +1,5 @@
 /** 
-* A List of all the action TYPES/(AKA 'possible scenarios') that could/shoul happen when calling the Comments API from jsonplaceholder.typicode.com 
+* A List of all the action TYPES/(AKA 'possible scenarios') that could/should happen when calling the Comments API from jsonplaceholder.typicode.com 
 * Each action TYPE is export for reuse in other parts of the state manager codebase, such as the actions/commentAction.js action CREATORS(functions) and the commentReducer, etc.
 */
 
